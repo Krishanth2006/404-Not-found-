@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA Calculator</title>
+    <link rel="stylesheet" href="b.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CGPA Calculator</h1>
+        <div class="form-group">
+            <label for="choice">Enter Your Choice:</label>
+            <select id="choice" onchange="handleChoiceChange()">
+                <option value="1">1. Calculate Total CGPA With GPAs</option>
+                <option value="2">2. Calculate per Each Sem With Regulations</option>
+            </select>
+        </div>
+
+        <div id="gpaInputSection" class="hidden">
+            <h2>Enter GPAs for Each Semester:</h2>
+            <div id="gpas">
+                <!-- Input fields for GPAs will be dynamically added here -->
+            </div>
+            <button onclick="calculateCGPA()">Calculate CGPA</button>
+        </div>
+
+        <div id="regulationInputSection" class="hidden">
+            <h2>Enter Regulation:</h2>
+            <select id="regulation">
+                <option value="2023">2023</option>
+                <option value="2019">2019</option>
+            </select>
+            <button onclick="startRegulationProcess()">Submit</button>
+        </div>
+
+        <div id="output" class="result">
+            <!-- Results will be displayed here -->
+        </div>
+    </div>
+
+    <script src="cgpa.js"></script>
+</body>
+</html>
